@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
+
+    defaultConfig {
+        applicationId "com.clarifai.clarapplai"
+
+        // Feel free to change this if you want! Even minSdkVersion 23 is fine with us!
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        // Needed to suppress bug in lint when using Retrofit and Okio
+        lintOptions {
+            lintConfig rootProject.file('gradle/lint.xml')
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "com.android.support:appcompat-v7:$versions.appCompatV7"
+    compile "com.android.support:design:$versions.appCompatV7"
+
+    // We use this to provide bindings for the Clarifai REST API. You can use it with ClarifaiAPIProvider
+    compile 'com.squareup.retrofit2:retrofit:2.0.1'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+    testCompile 'junit:junit:4.12'
+
+    // yingnan deps
+    compile 'com.clarifai.clarifai-api2:core:2.2.6'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    compile project(':smoothcheckbox')
+    compile 'com.yuyh.easyadapter:library:1.1.1'
+    compile group: 'com.github.abel533', name: 'ECharts', version: '3.0.0.2'
+    compile group: 'org.ejml', name: 'all', version: '0.30'
+}

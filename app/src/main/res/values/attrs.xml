@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TagDrawView">
+        <attr name="rb_ripple_width_1" format="dimension" />
+        <attr name="rb_ripple_width_2" format="dimension" />
+    </declare-styleable>
+</resources>

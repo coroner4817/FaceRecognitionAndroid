@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/pbar_editdb"
+        android:background="@drawable/progressbarstyle"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="#E2E2E2"
+            android:weightSum="100">
+            <TextView
+                android:text="Thumbnail"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="40"
+                android:gravity="center" />
+            <TextView
+                android:text="Tag"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:gravity="center" />
+            <TextView
+                android:text="Count"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:gravity="center" />
+            <TextView
+                android:text="IsFamily"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_editdb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/background_light"
+            android:dividerHeight="10sp" />
+    </LinearLayout>
+
+
+</FrameLayout>
