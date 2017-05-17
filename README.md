@@ -1,4 +1,4 @@
-# Clarapplai Demo - Yingnan Wang
+# Face Recognition Android App
 An Android app tagging face with Clarifai API.  
 
 ## Implementation
