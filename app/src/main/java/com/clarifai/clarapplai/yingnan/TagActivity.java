@@ -74,9 +74,6 @@ public class TagActivity extends BaseActivity {
     private Point faceInit;
     private Point faceEnd;
 
-    private static final String appID = "syd2cxZAW6qaSbkr2I0a4XbjD_noLj0dcPNDaa9N";
-    private static final String appSecret = "ivxTrhherC38O9S4iBBL8UeQn1Axbwj5GHiVRwaB";
-
     // old api
 //    private ClarifaiAPI mClarifaiAPI = new ClarifaiAPI(appID, appSecret);
     // new
